@@ -1,0 +1,22 @@
+@startuml
+Fila ..|> Paciente
+Historico ..|> Paciente
+
+
+class Paciente {
+private int classificacao
+private in id
+private LocalTime horarioChegada
+private LocalTime horarioAtendimento
+private String medico
+}
+class Fila{
+public void filaAdicionar(Paciente paciente)
+public void remover(Paciente paciente)
+public Paciente getPaciente(int id)
+}
+class Historico{
+public void historicoAdicionar(Paciente paciente)
+public void mostrarHistorico()
+}
+@enduml
